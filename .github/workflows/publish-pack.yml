@@ -19,6 +19,7 @@ jobs:
           gh codeql set-version latest
       - name: Test pack
         run: |
+          gh codeql pack install javascript-queries
           gh codeql test run javascript-queries
       - name: Publish pack
         env:
