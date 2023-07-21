@@ -10,7 +10,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release download -R advanced-security/github-app-auth --pattern github-app-auth-linux -O github-app-auth
-          chmod +x
+          chmod +x github-app-auth
       - name: Install CodeQL
         env:
           GH_TOKEN: ${{ github.token }}
